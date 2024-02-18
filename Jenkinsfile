@@ -12,6 +12,7 @@ pipeline {
             steps {
                 // Invoke Maven to build the project
                 sh 'mvn --version'
+                sh 'mvn compile'
             }
         }
     }
