@@ -13,7 +13,20 @@ pipeline {
                 // Invoke Maven to build the project
                 sh 'mvn --version'
                 sh 'mvn compile'
+            }
+        }
+        stage('packagin') {
+            steps {
+                // packaging and create jar file
                 sh 'mvn package'
+
+            }
+        }
+        stage('Test') {
+            steps {
+                // run test
+                sh 'mvn test'
+
             }
         }
     }
